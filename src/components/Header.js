@@ -190,7 +190,7 @@ const Header = () => {
                 <footer className='footer'>
                     <div className="footer-components">
                         <div className="footer-form">
-                            <p>АКТУАЛЬНЫЕ ВАКАНСИИВ<br/> НАШЕЙ КОМПАНИИ</p>
+                            <p>АКТУАЛЬНЫЕ ВАКАНСИИ В<br/> НАШЕЙ КОМПАНИИ</p>
                             <button className='btn'>ОТПРАВИТЬ<br/>  СВОИ ДАННЫЕ <img src={arrow} alt=""/></button>
                         </div>
                         <div className="footer-navigate">
