@@ -1,0 +1,57 @@
+.application {
+  margin: 0;
+  padding: 0 98px;
+  box-sizing: border-box;
+  .be-partners {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+    .subtitle {
+      color: #FFF;
+      font-family: Montserrat;
+      font-size: 42.392px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: -2.42px;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 630px;
+      height: 122px;
+      color: #FFF;
+      font-family: Montserrat;
+      font-size: 43.2px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: -2.16px;
+      background-image: url("../images/partnership button.svg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      img {
+        width: 97.783px;
+        height: 91.406px;
+        background-color: #000;
+        border-radius: 50%;
+        padding: 10px;
+      }
+    }
+  }
+  .main-text {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 189.6px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -9.615px;
+    text-align: center;
+    padding-bottom: 80px;
+    margin-bottom: 0;
+  }
+}
