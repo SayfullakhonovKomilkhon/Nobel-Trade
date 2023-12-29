@@ -30,10 +30,18 @@
       margin-top: 30px;
     }
     .row {
-      margin-top: 50px;
+      margin: 50px 0;
       padding-bottom: 30px;
       .col-lg-12 {
         margin-bottom: 16px;
+        img {
+          width: 100%;
+        }
+      }
+      .col-lg-6 {
+        img {
+          width: 100%;
+        }
       }
     }
   }
@@ -67,7 +75,7 @@
         font-weight: 600;
         line-height: normal;
         letter-spacing: -7.308px;
-        padding: 0 40px;
+        padding: 0 30px;
       }
       .companies-subtitle {
         color: #FFF;
@@ -77,17 +85,17 @@
         font-weight: 600;
         line-height: normal;
         letter-spacing: -2.038px;
-        padding: 0 49px;
+        padding: 0 39px;
       }
       h3 {
         color: #FFF;
         font-family: Montserrat;
-        font-size: 102.225px;
+        font-size: 95px;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
         letter-spacing: -5.111px;
-        padding: 0 45px;
+        padding: 0 35px;
       }
     }
     .row {
@@ -115,6 +123,7 @@
         }
         .half-img {
           border-radius: 38.792px;
+          width: 100%;
         }
       }
     }
@@ -155,7 +164,13 @@
     }
     .rectangle {
       width: 350px;
-      height: 100px;
+      height: 68px;
+      vertical-align: inherit;
     }
+  }
+  .application-part {
+    margin: 0;
+    padding: 0 98px;
+    box-sizing: border-box;
   }
 }

@@ -1,7 +1,4 @@
 .application {
-  margin: 0;
-  padding: 0 98px;
-  box-sizing: border-box;
   .be-partners {
     display: flex;
     align-items: center;
@@ -10,7 +7,7 @@
     .subtitle {
       color: #FFF;
       font-family: Montserrat;
-      font-size: 42.392px;
+      font-size: 40px;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
@@ -20,7 +17,7 @@
       display: flex;
       align-items: center;
       justify-content: space-around;
-      width: 630px;
+      max-width: 630px;
       height: 122px;
       color: #FFF;
       font-family: Montserrat;
@@ -33,6 +30,7 @@
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
+      border-radius: 60.5px;
       img {
         width: 97.783px;
         height: 91.406px;
@@ -45,7 +43,7 @@
   .main-text {
     color: #FFF;
     font-family: Montserrat;
-    font-size: 189.6px;
+    font-size: 175px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;

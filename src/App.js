@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <Router>
-        <Advantages/>
+        <Header/>
         <Routes>
 
         </Routes>

@@ -72,10 +72,12 @@ const Advantages = () => {
                     <img className="advantages-truck" src={advantagesSectionTruck} alt=""/>
                     <h3 className='workers'>СОТРУДНИКИ КОМПАНИИ  NOBEL TRADE <img className="rectangle" src={advantagesRectangle} alt=""/></h3>
                     <p className="subtitle">в сплочённой командной работе, эффективно решают любые задачи, вне зависимости от сложности</p>
-                    <img src={nobelTradeVideo} alt=""/>
+                    <img className='w-100' src={nobelTradeVideo} alt=""/>
 
                 </section>
-                <Application/>
+                <div className="application-part">
+                    <Application/>
+                </div>
                 <Footer/>
             </div>
         </>
