@@ -7,12 +7,16 @@ import Advantages from "./components/Advantages";
 function App() {
   return (
     <div>
-      <Router>
-        <Header/>
-        <Routes>
+        <Advantages/>
 
-        </Routes>
-      </Router>
+
+
+      {/*<Router>*/}
+      {/*  */}
+      {/*  <Routes>*/}
+
+      {/*  </Routes>*/}
+      {/*</Router>*/}
     </div>
   );
 }

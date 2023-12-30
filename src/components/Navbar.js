@@ -17,7 +17,7 @@ const Navbar = () => {
                     <div className="navbar-nav">
                         <a className="nav-item nav-link active" href="#">ГЛАВНАЯ <span
                             className="sr-only">(current)</span></a>
-                        <a className="nav-item nav-link" href="Advantages.js">НАШИ ПРЕИМУЩЕСТВА</a>
+                        <a className="nav-item nav-link" href="/Advantages.js">НАШИ ПРЕИМУЩЕСТВА</a>
                         <a className="nav-item nav-link" href="#">О КОМПАНИИ</a>
                         <a className="nav-item nav-link " href="#">ПАРТНЕРЫ</a>
                         <a className="nav-item nav-link " href="#">КАТАЛОГ</a>
