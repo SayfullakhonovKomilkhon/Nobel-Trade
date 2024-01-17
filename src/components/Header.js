@@ -16,12 +16,14 @@ import oil8000 from '../images/8000-oil.png'
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Application from "./Application";
+import sunFlower from '../images/sunflower.png'
+import blackSeeds from '../images/black seeds.png'
 
 
 const Header = () => {
     return (
         <>
-            <div className="home">
+            <div className="home text-white">
                 <header className='header'>
                     <Navbar/>
                     <section className='header-info'>
@@ -114,8 +116,24 @@ const Header = () => {
                                     <img src={oil8000} alt=""/>
                                 </div>
                             </div>
-                            <div className="col-lg-12">
-                                <div className="card-about crad-fill"></div>
+                            <div className="col-lg-12 ">
+                                <div className="card-about d-flex justify-content-between py-4">
+                                    <div className="col-lg-6">
+                                        <img className='h-100' src={sunFlower} alt=""/>
+                                    </div>
+                                    <div className="col-lg-6">
+                                        <img src={blackSeeds} alt=""/>
+                                        <p className="subtitle">
+                                            суммарная производственная мощность предприятий компаний
+                                        </p>
+                                        <h3 className='title'>
+                                            365 000 тонн в год
+                                        </h3>
+                                        <p className="subtitle">
+                                            переработки семян подсолнуха
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>

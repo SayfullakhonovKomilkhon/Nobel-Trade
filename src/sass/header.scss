@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@font-face {
+  font-family: Suissie Intl;
+  src: url("../fonts/Suisse Intl/SuisseIntl-Book.otf");
 
+}
 
 
 .home{
@@ -21,7 +25,7 @@
         .col-7{
           h1{
             color: #FFF;
-            font-family: Suisse Int;
+            font-family: "Suissie Intl";
             font-size: 150.024px;
             font-style: normal;
             font-weight: 400;
@@ -210,6 +214,30 @@
             background: radial-gradient(107.32% 141.42% at 0% 0%, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.00) 100%);
             box-shadow: -5px -5px 250px 0px rgba(255, 255, 255, 0.02) inset;
             backdrop-filter: blur(21px);
+            .col-lg-6 {
+              img {
+                width: 100%;
+                height: auto;
+                border-radius: 32.5px;
+              }
+              .title {
+                font-family: Montserrat;
+                font-size: 60.54px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                letter-spacing: -3.027px;
+              }
+              .subtitle {
+                font-family: Montserrat;
+                font-size: 26.242px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                letter-spacing: -1.312px;
+                margin: 0;
+              }
+            }
           }
         }
       }

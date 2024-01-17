@@ -1,22 +1,20 @@
 import React from 'react';
-import Header from "./components/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
 import Advantages from "./components/Advantages";
+import Katalog from "./components/Katalog";
 
 
 function App() {
   return (
-    <div>
-        <Advantages/>
-
-
-
-      {/*<Router>*/}
-      {/*  */}
-      {/*  <Routes>*/}
-
-      {/*  </Routes>*/}
-      {/*</Router>*/}
+    <div className='app'>
+      <Router>
+        <Routes>
+            <Route path='/' index element={<Header/>}/>
+            <Route path='order'  element={<Advantages/>}/>
+            <Route path='product'  element={<Katalog/>}/>
+        </Routes>
+      </Router>
     </div>
   );
 }
