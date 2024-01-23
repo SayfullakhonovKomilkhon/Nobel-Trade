@@ -6,23 +6,46 @@
 }
 
 
+
+#root {
+
+  overflow-y: hidden;
+  width: 1500px !important;
+  z-index: 99;
+  background-color: #000;
+}
+
 .home{
+  .animatedHeader {
+    background-position-x: 0px !important;
+    transition: 1s;
+  }
+
+
+
+
   .header {
     margin: 0;
     padding: 0 98px;
     box-sizing: border-box;
+    background-color: #000;
+    max-width: 100%;
     background-image: url("../images/header-background.png");
-    height: 100%;
-    background-position: left;
+    max-height: 100vh !important;
+    background-position-x: 400px;
     background-size: cover;
     background-repeat: no-repeat;
+
+
+
 
 
     .header-info {
       .row{
         margin: 0;
         padding: 0;
-        .col-7{
+          .col-7{
+
           h1{
             color: #FFF;
             font-family: "Suissie Intl";
@@ -38,6 +61,17 @@
               }
             }
           }
+            .animatedBox {
+              opacity: 0;
+              transform: translateY(0);
+              transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+            }
+
+            .appear {
+              opacity: 1;
+              transform: translateY(0);
+            }
+
           .subtitle {
             color: #FFF;
             font-family: Montserrat;
@@ -51,18 +85,64 @@
         }
         .col-5{
 
+          img {
+            width: 284.7px;
+            height: 431px;
+          }
+          .imgLeft {
+            position: absolute;
+            right: 150px;
+            top: 0px;
+            z-index: 1;
+          }
+          .imgCenter {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: -90%;
+            right: -220%;
+            z-index: 3;
+            width: 1924.806px;
+            height: 1924.806px;
+            transform: rotate(30.534deg);
+            flex-shrink: 0;
+            opacity: 0.7;
+          }
+          .animatedImgCenter {
+            position: absolute;
+            right: 120px;
+            top: 60px;
+            z-index: 3;
+          }
+          .imgRight {
+            position: absolute;
+            right: 0px;
+            top: 100px;
+            z-index: 2;
+          }
         }
       }
     }
   }
   .about {
+    position: relative;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: #000;
+    //opacity: 0;
+    //transform: translateY(20px); /* Adjust the initial position as needed */
+    //transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
 
     .main {
       padding: 50px 98px 0;
+      opacity: 0;
+      transform: translateY(20px); /* Adjust the initial position as needed */
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+      position: relative;
+      background-color: #000;
+      z-index: 9;
       .title {
         display: flex;
         color: #FFF !important;
@@ -148,6 +228,9 @@
       background-image: url("../images/background-about-us.png");
       background-position: center;
       padding-bottom: 110px;
+      opacity: 0;
+      transform: translateY(20px); /* Adjust the initial position as needed */
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
       .row {
         padding: 50px 98px 0;
         margin: 0;
@@ -245,6 +328,9 @@
     .partners {
       background-image: url("../images/background-partners.png");
       background-position: center;
+      opacity: 0;
+      transform: translateY(20px); /* Adjust the initial position as needed */
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
       .partners-page {
         padding: 50px 98px 0;
         h2 {
@@ -316,7 +402,15 @@
 
       }
     }
+
+    .animatedMain {
+      opacity: 1;
+      transform: translateY(0);
+      transition: 2s;
+    }
+
   }
+
 
 }
 

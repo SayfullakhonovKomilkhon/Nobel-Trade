@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import '../sass/header.scss';
+import headerLogoOil from '../images/header-logo.svg'
 import capsule from '../images/header-capsule-text.svg'
 import aboutImg from "../images/header-capsule-text-mini.svg";
 import rectengleImg from "../images/squre-elemrnt.svg";
@@ -18,36 +19,78 @@ import Footer from "./Footer";
 import Application from "./Application";
 import sunFlower from '../images/sunflower.png'
 import blackSeeds from '../images/black seeds.png'
-
+import headerOilDropLeft from '../images/header oil drop left.svg'
+import headerOilDropCenter from '../images/header oil drop centre.svg'
+import headerOilDropRight from '../images/header oil drop right.svg'
 
 const Header = () => {
+    const [isAnimate, setIsAnimate] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            // Calculate the scroll position and window height
+            const scrollY = window.scrollY || document.documentElement.scrollTop;
+            const windowHeight = window.innerHeight;
+
+            // Customize the threshold based on your needs
+            const threshold = windowHeight * 0.8;
+
+            // Set the visibility based on the scroll position
+            setIsAnimate(scrollY > threshold);
+        };
+
+        // Attach the scroll event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Detach the event listener on component unmount
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+
+
+    }, []);
+    useEffect(() => {
+        // Set isVisible to true after a delay to trigger the animation
+        const timeoutId = setTimeout(() => {
+            setIsVisible(true);
+
+        }, 500);
+        // You can adjust the delay (in milliseconds) as needed
+        // Clean up the timeout to avoid memory leaks
+        return () => clearTimeout(timeoutId);
+    })
+
+
     return (
         <>
             <div className="home text-white">
-                <header className='header'>
+                <header className={`header ${isVisible ? 'animatedHeader' : ''}`}>
                     <Navbar/>
                     <section className='header-info'>
                         <div className="row">
                             <div className="col-7">
                                 <h1>NOBEL
                                     <span className='header-capsule'>
-                                <img className='header-capsule_img' src={capsule} alt=""/>
-                                <span className='header-text_style'>TRADE</span>
-                                </span>
+                                        <img className={`animatedBox ${isVisible ? 'appear' : ''}`} src={capsule} alt=""/>
+                                    <span className='header-text_style'>TRADE</span>
+                                    </span>
                                 </h1>
-                                <p className="subtitle">
+                                <p className={`subtitle animatedBox ${isVisible ? 'appear' : ''}`}>
                                     Компания NOBEL TRADE - крупнейший импортёр
                                     подсолнечного масла и пальмового жира  в Республику Узбекистан
                                 </p>
                             </div>
                             <div className="col-5">
-                                {/*<img src={headerLogoOil} alt=""/>*/}
+                                <img className={`imgLeft`} src={headerOilDropLeft} alt=""/>
+                                <img className={`imgCenter`} src={headerOilDropCenter} alt=""/>
+                                <img className={`imgRight`} src={headerOilDropRight} alt=""/>
                             </div>
                         </div>
                     </section>
                 </header>
                 <div className="about">
-                    <section className="main">
+                    <section className={`main ${isAnimate ? 'animatedMain' : ''} `}>
                         <h3 className="title">
                             О КОМПАНИИ
                             <span className="about-capsule"><img className='about-img' src={aboutImg} alt=""/></span>
@@ -87,7 +130,7 @@ const Header = () => {
                         </p>
                         <img className='videoplayer' src={videoPlayer} alt=""/>
                     </section>
-                    <section className="about-us">
+                    <section className='about-us'>
                         <div className="row">
                             <div className="col-lg-4">
                                 <div className="card-about">
